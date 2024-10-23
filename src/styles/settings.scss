@@ -1,0 +1,151 @@
+$white: #ffffff;
+$whitePage: #f5f5f5f5;
+$black: #000000;
+$primary: #ff6b00;
+$text: #05090e;
+$red: #ff3b30;
+$ligthGray: #cccccc;
+$specialGray: #040405;
+
+// 787880
+
+.color {
+  &-primary {
+    color: $primary;
+  }
+  &-text {
+    color: $text;
+  }
+  &-red {
+    color: $red;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300..900;1,300..900&display=swap');
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == maxPreMobile {
+    @media (max-width: 1020px) {
+      @content;
+    }
+  } @else if $breakpoint == preMobile {
+    @media (min-width: 768px) and (max-width: 1020px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: 1020px) and (max-width: 1260px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1260px) and (max-width: 1600px) {
+      @content;
+    }
+  } @else if $breakpoint == bigDesctop {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+}
+
+body {
+  background-color: $whitePage;
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-thin {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fontsize-14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.fontsize-12 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.fontsize-16 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.fontsize-20 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.fontsize-24 {
+  font-size: 24px;
+  line-height: 30px;
+}
+.mt {
+  &-64 {
+    margin-top: 64px;
+  }
+  &-24 {
+    margin-top: 24px;
+  }
+  &-16 {
+    margin-top: 16px;
+  }
+}
+.ml {
+  &-auto {
+    margin-left: auto;
+  }
+}
+.container {
+  max-width: 678px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-title {
+  text-align: center;
+  color: $primary;
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+.text-decoration-underline {
+  text-decoration: underline;
+}
